@@ -5,6 +5,7 @@ import { BsShieldCheck, BsCheckAll } from 'react-icons/bs'
 import { IoAdd } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom';
 import '../../Css/AddComment.css'
+import { API_URL } from '../../API';
 
 const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, count }) => {
 
@@ -21,7 +22,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
         e.preventDefault();
         try {
-            await axios.post(`/comment/${slug}/addComment`, { content, star }, {
+            await axios.post(API_URL+ `/comment/${slug}/addComment`, { content, star }, {
                 headers: {
                     "Content-Type": "application/json",
                     authorization: `Bearer ${localStorage.getItem("authToken")}`,
@@ -93,7 +94,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
 
                     <div className={showStatus ? 'activeuser-info ' : 'activeuser-info hidden '}>
-                        <img src={`/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                        <img src={`https://mern-blog-website-dhsz.onrender.com/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
                         <span className='username'>{activeUser.username}  </span>
                     </div>
 

@@ -120,7 +120,7 @@ const EditProfile = () => {
                                     <div class="absolute">
                                         Currently Image
                                     </div>
-                                    <img src={`http://localhost:5000/userPhotos/${previousPhoto}`} alt="userPhoto" />
+                                    <img src={`https://mern-blog-website-dhsz.onrender.com/userPhotos/${previousPhoto}`} alt="userPhoto" />
                                 </div>
 
                             </div>

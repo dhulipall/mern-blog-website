@@ -55,7 +55,7 @@ const RegisterScreen = () => {
 
         <div className="register-banner-section ">
 
-          <img src="register.png" alt="banner" width="490px" />
+          <img src="https://mern-blog-website-1-snts.onrender.com/register.png" alt="banner" width="490px" />
         </div>
 
         <div className="section-wrapper">
