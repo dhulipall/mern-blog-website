@@ -101,7 +101,7 @@ const LoginScreen = () => {
 
         <div className="login-banner-section ">
 
-          <img src="login.png" alt="banner" width="400px" />
+          <img src="https://mern-blog-website-1-snts.onrender.com/login.png" alt="banner" width="400px" />
         </div>
 
       </div>
