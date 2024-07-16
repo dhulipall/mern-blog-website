@@ -33,11 +33,8 @@ const RegisterScreen = () => {
       );
 
       localStorage.setItem("authToken", data.token);
-
-      setTimeout(() => {
-        navigate('/');
-      }, 1800)
-
+      navigate('/');
+      
     } catch (error) {
 
       setError(error.response.data.error);
@@ -64,7 +61,7 @@ const RegisterScreen = () => {
 
           <div className="top-suggest_login">
             <span> Have an account? </span>
-            <a href="/login">Sign In</a>
+            <span style={{ fontWeight: 600, color: '#000', cursor: 'pointer'}} onClick={()=>navigate("/login")}>Sign In</span>
           </div>
 
           <div className="top-register-explain">
