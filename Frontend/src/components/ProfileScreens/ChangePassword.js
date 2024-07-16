@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../../Css/ChangePassword.css'
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5'
+import { API_URL } from '../../API';
 
 const ChangePassword = () => {
 
@@ -29,7 +30,7 @@ const ChangePassword = () => {
         }
 
         try {
-            const { data } = await axios.put(
+            const { data } = await axios.put(API_URL+
                 "/user/changePassword",
                 {
                     newPassword,
@@ -38,7 +39,7 @@ const ChangePassword = () => {
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        authorization: `Bearer ${localStorage.getItem("authToken")}`,
+                        "Authorization": `Bearer ${localStorage.getItem("authToken")}`,
                     },
                 }
             );
