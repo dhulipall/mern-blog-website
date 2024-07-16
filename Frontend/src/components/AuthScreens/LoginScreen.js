@@ -18,13 +18,8 @@ const LoginScreen = () => {
         { email, password }
       );
       localStorage.setItem("authToken", data.token);
-
-      setTimeout(() => {
-
-        navigate("/")
-
-      }, 1800)
-
+       navigate("/")
+      
     } catch (error) {
       setError(error.response.data.error);
       setTimeout(() => {
@@ -45,7 +40,7 @@ const LoginScreen = () => {
           <div className="top-suggest_register">
 
             <span>Don't have an account? </span>
-            <a href="/register">Sign Up</a>
+            <span style={{ fontWeight: 600, color: '#000', cursor: 'pointer'}} onClick={()=> navigate("/register")}>Sign Up</span>
 
           </div>
 
