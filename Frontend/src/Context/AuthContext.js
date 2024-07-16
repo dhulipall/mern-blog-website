@@ -9,7 +9,7 @@ const AuthContextProvider = props => {
   const [config, setConfig] = useState({
     headers: {
       "Content-Type": "application/json",
-      authorization: `Bearer ${localStorage.getItem("authToken")}`,
+      "Authorization": `Bearer ${localStorage.getItem("authToken")}`,
     },
   })
 
@@ -23,9 +23,9 @@ const AuthContextProvider = props => {
       }
       catch (error) {
 
-        localStorage.removeItem("authToken");
+        // localStorage.removeItem("authToken");
 
-        setActiveUser({})
+        // setActiveUser({})
       }
     };
     controlAuth()
