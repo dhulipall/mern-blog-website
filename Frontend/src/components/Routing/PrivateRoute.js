@@ -17,7 +17,7 @@ const PrivateRoute =( ) => {
         const config = {
             headers: {
             "Content-Type": "application/json",
-            authorization: `Bearer ${localStorage.getItem("authToken")}`,
+            "Authorization": `Bearer ${localStorage.getItem("authToken")}`,
             },
         };
         try {
@@ -30,7 +30,7 @@ const PrivateRoute =( ) => {
         } 
         catch (error) {
 
-            localStorage.removeItem("authToken");
+            // localStorage.removeItem("authToken");
 
             setAuth(false)
             setActiveUser({})
